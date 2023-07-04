@@ -118,8 +118,8 @@
 			log_admin("DEBUG: [src] (cutting board item) just tried to process [contents[1]] but wasn't able to get a recipe somehow, this should not be able to happen.")
 			return
 
-		//playsound(src, 'sound/effects/butcher.ogg', 50, TRUE)
-		balloon_alert(user, "cutting...")
+		playsound(src, 'sound/weapons/slice.ogg', 50, TRUE)
+		balloon_alert_to_viewers("cutting...")
 		if(!do_after(user, 3 SECONDS, target = src))
 			balloon_alert(user, "stopped cutting")
 			return
